@@ -50,8 +50,7 @@ box-shadow:0 6px 14px rgba(212,175,55,0.4);
 /* sections */
 
 .section{
-display:none;
-padding:30px;
+padding:40px 15px;
 }
 
 .show{
@@ -211,7 +210,8 @@ color:#b8963d;
 .countdown{
 display:flex;
 justify-content:center;
-gap:18px;
+flex-wrap:wrap;
+gap:12px;
 margin-top:15px;
 }
 
@@ -399,4 +399,100 @@ left:-10px;
 bottom:-10px;
 right:-10px;
 transform:rotate(180deg);
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+@media screen and (max-width: 768px){
+
+.tabs{
+flex-wrap:wrap;
+gap:8px;
+}
+
+.tab{
+font-size:14px;
+padding:8px 14px;
+}
+
+/* cards */
+
+.card{
+max-width:90%;
+padding:20px;
+}
+
+/* couple title */
+
+.couple-name{
+font-size:42px;
+}
+
+/* section headings */
+
+.decor-heading{
+font-size:40px;
+}
+
+/* section subtitle */
+
+.section-title{
+font-size:22px;
+}
+
+/* body text */
+
+.invite-text{
+font-size:18px;
+}
+
+/* images */
+
+.photo,
+.ceremony-img,
+.reception-photo{
+width:200px;
+height:260px;
+object-fit:cover;
+}
+
+/* countdown fix */
+
+.countdown{
+flex-wrap:wrap;
+gap:10px;
+}
+
+.count-box{
+font-size:14px;
+padding:8px 10px;
+}
+
+/* details */
+
+.details{
+font-size:16px;
+flex-direction:column;
+gap:3px;
+}
+
+/* map */
+
+iframe{
+height:200px;
+}
+
+/* music button */
+
+.music{
+width:45px;
+height:45px;
+font-size:18px;
+}
+
 }
