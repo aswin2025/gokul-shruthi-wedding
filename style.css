@@ -61,13 +61,11 @@ display:block;
 
 .card{
 background:white;
-padding:25px 18px;
+padding:30px;
 border-radius:18px;
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
 margin:20px auto;
 max-width:520px;
-width:90%;
-box-sizing:border-box;
 }
 
 /* invitation */
@@ -211,20 +209,21 @@ color:#b8963d;
 
 .countdown{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 margin-top:20px;
-width:100%;
-box-sizing:border-box;
+max-width:300px;
+margin-left:auto;
+margin-right:auto;
 }
 
 .count-box{
 background:#faf6ed;
-padding:10px;
+padding:14px 16px;
 border-radius:10px;
-font-size:16px;
 text-align:center;
 box-shadow:0 6px 15px rgba(0,0,0,0.1);
+font-size:18px;
 }
 
 @keyframes pulse{
@@ -409,99 +408,3 @@ max-width:100%;
 height:auto;
 }
 
-/* ---------------- MOBILE RESPONSIVE ---------------- */
-
-@media screen and (max-width: 600px){
-
-.tabs{
-flex-wrap:wrap;
-gap:8px;
-}
-
-.tab{
-font-size:14px;
-padding:8px 14px;
-}
-
-/* cards */
-
-.card{
-background:white;
-padding:25px 18px;
-border-radius:18px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-margin:20px auto;
-max-width:520px;
-width:90%;
-box-sizing:border-box;
-}
-
-/* couple title */
-
-.couple-name{
-font-size:42px;
-}
-
-/* section headings */
-
-.decor-heading{
-font-size:40px;
-}
-
-/* section subtitle */
-
-.section-title{
-font-size:22px;
-}
-
-/* body text */
-
-.invite-text{
-font-size:18px;
-}
-
-/* images */
-
-.photo,
-.ceremony-img,
-.reception-photo{
-width:200px;
-height:260px;
-object-fit:cover;
-}
-
-/* countdown fix */
-
-.countdown{
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
-
-.count-box{
-font-size:14px;
-padding:10px;
-}
-
-/* details */
-
-.details{
-font-size:16px;
-flex-direction:column;
-gap:3px;
-}
-
-/* map */
-
-iframe{
-height:200px;
-}
-
-/* music button */
-
-.music{
-width:45px;
-height:45px;
-font-size:18px;
-}
-
-}
