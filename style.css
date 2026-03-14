@@ -61,7 +61,7 @@ display:block;
 
 .card{
 background:white;
-padding:30px;
+padding:25px 18px;
 border-radius:18px;
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
 margin:20px auto;
@@ -210,18 +210,20 @@ color:#b8963d;
 .countdown{
 display:flex;
 justify-content:center;
+align-items:center;
 flex-wrap:wrap;
 gap:12px;
-margin-top:15px;
+margin-top:20px;
 }
 
 .count-box{
 background:#faf6ed;
-padding:12px 18px;
+padding:12px 14px;
 border-radius:10px;
-font-weight:bold;
-font-size:18px;
-animation:pulse 2s infinite;
+font-size:16px;
+min-width:70px;
+text-align:center;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
 }
 
 @keyframes pulse{
@@ -423,8 +425,12 @@ padding:8px 14px;
 /* cards */
 
 .card{
-max-width:90%;
-padding:20px;
+background:white;
+padding:25px 18px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+margin:20px auto;
+max-width:520px;
 }
 
 /* couple title */
@@ -469,8 +475,9 @@ gap:10px;
 }
 
 .count-box{
+min-width:65px;
 font-size:14px;
-padding:8px 10px;
+padding:10px 12px;
 }
 
 /* details */
