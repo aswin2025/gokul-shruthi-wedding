@@ -66,6 +66,8 @@ border-radius:18px;
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
 margin:20px auto;
 max-width:520px;
+width:90%;
+box-sizing:border-box;
 }
 
 /* invitation */
@@ -208,20 +210,19 @@ color:#b8963d;
 /* countdown */
 
 .countdown{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-gap:12px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
 margin-top:20px;
+width:100%;
+box-sizing:border-box;
 }
 
 .count-box{
 background:#faf6ed;
-padding:12px 14px;
+padding:10px;
 border-radius:10px;
 font-size:16px;
-min-width:70px;
 text-align:center;
 box-shadow:0 6px 15px rgba(0,0,0,0.1);
 }
@@ -410,7 +411,7 @@ height:auto;
 
 /* ---------------- MOBILE RESPONSIVE ---------------- */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 600px){
 
 .tabs{
 flex-wrap:wrap;
@@ -431,6 +432,8 @@ border-radius:18px;
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
 margin:20px auto;
 max-width:520px;
+width:90%;
+box-sizing:border-box;
 }
 
 /* couple title */
@@ -470,14 +473,13 @@ object-fit:cover;
 /* countdown fix */
 
 .countdown{
-flex-wrap:wrap;
-gap:10px;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
 }
 
 .count-box{
-min-width:65px;
 font-size:14px;
-padding:10px 12px;
+padding:10px;
 }
 
 /* details */
