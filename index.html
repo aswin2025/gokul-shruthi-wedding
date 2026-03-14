@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Gokul & Shruthi Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+<div class="petals"></div>
+</head>
+
+<body>
+
+<div class="tabs">
+
+<button class="tab active" onclick="openTab('invite',this)">Invitation</button>
+
+<button class="tab" onclick="openTab('ceremony',this)">Wedding Ceremony</button>
+
+<button class="tab" onclick="openTab('reception',this)">Reception</button>
+
+</div>
+
+<!-- INVITATION -->
+
+<div id="invite" class="section show">
+
+<div class="card">
+
+<div class="couple-name">Gokul & Shruthi</div>
+
+<img src="couple.jpg" class="photo">
+
+<div class="decor-line"></div>
+
+<p class="invite-text">
+Our hearts are full, and we feel incredibly blessed by the love and support we've received.
+As we make our vows and begin our new life together, having you with us would be the best gift we could ask for.
+</p>
+
+<p class="invite-text">Bound by love and blessed by family, we</p>
+
+<div class="invite-names">Gokul</div>
+<p class="invite-text">Son of Jayakumar E. & Mini. V.</p>
+
+<p class="invite-text">&</p>
+
+<div class="invite-names">Shruthi</div>
+<p class="invite-text">Daughter of Santhosh S & Preetha Santhosh</p>
+
+<p class="invite-text">
+invite you to join us in celebrating the most precious day of our lives.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">Save The Date</div>
+
+<p class="invite-text">May 10 • 10:30 AM</p>
+
+<div class="countdown">
+
+<div class="count-box">
+<span id="days"></span><br>Days
+</div>
+
+<div class="count-box">
+<span id="hours"></span><br>Hours
+</div>
+
+<div class="count-box">
+<span id="minutes"></span><br>Minutes
+</div>
+
+<div class="count-box">
+<span id="seconds"></span><br>Seconds
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CEREMONY -->
+
+<div id="ceremony" class="section">
+
+<div class="card">
+
+<div class="decor-heading">Wedding Ceremony</div>
+
+<img src="ceremony.jpg" class="ceremony-img">
+
+<div class="section-title">Ceremony Details</div>
+
+<div class="details">
+<i class="fa-solid fa-calendar"></i>
+<span class="highlight"> Date:</span> Sunday, 10th May 2026
+</div>
+
+<div class="details">
+<i class="fa-solid fa-clock"></i>
+<span class="highlight"> Time:</span> 10:45 AM – 11:20 PM
+</div>
+
+<div class="details">
+<i class="fa-solid fa-location-dot"></i>
+<span class="highlight"> Venue:</span> Lijo Auditorium, Kumbazhamuri, Pathanamthitta
+</div>
+
+<p class="invite-text">
+A moment for our hearts to join, wrapped in the affection of those we cherish.
+With joyful hearts and hopeful eyes, we await your presence as we begin this new chapter together.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">Venue & Map</div>
+
+<iframe src="https://www.google.com/maps?q=Lijo%20Auditorium%20Pathanamthitta&output=embed">></iframe>
+
+</div>
+
+</div> 
+
+<!--- RECEPTION --->
+
+<div id="reception" class="section">
+
+<div class="card">
+
+<div class="lights"></div>
+
+<div class="decor-heading">Reception</div>
+
+<img src="reception.jpg" class="reception-photo">
+
+<p class="invite-text">
+A night to celebrate love, laughter, and new beginnings with family and friends.
+</p>
+
+<div class="details">
+<i class="fa-solid fa-calendar"></i>
+<span class="highlight"> Date:</span> Saturday, 16th May 2026
+</div>
+
+<div class="details">
+<i class="fa-solid fa-clock"></i>
+<span class="highlight"> Time:</span> 5:00 PM – 9:00 PM
+</div>
+
+<div class="details">
+<i class="fa-solid fa-location-dot"></i>
+<span class="highlight"> Venue:</span> AL-Saj Comet Mini Hall, Kazhakootam, Trivandrum
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">Reception Map</div>
+
+<iframe src="https://www.google.com/maps?q=Al-Saj%20Comet%20Mini%20Hall%20Kazhakootam&output=embed"></iframe>
+
+</div>
+
+</div>
+
+<audio id="music" loop preload="auto">
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<button class="music" onclick="toggleMusic()">🎵</button>
+
+<script>
+
+function openTab(tab,btn){
+
+document.querySelectorAll(".section").forEach(s=>s.classList.remove("show"))
+
+document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"))
+
+document.getElementById(tab).classList.add("show")
+
+btn.classList.add("active")
+
+}
+
+function toggleMusic(){
+
+var music=document.getElementById("music")
+
+if(music.paused){
+music.play()
+}else{
+music.pause()
+}
+
+}
+
+var countDownDate = new Date("May 10, 2026 10:30:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = countDownDate - now;
+
+document.getElementById("days").innerHTML =
+Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML =
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+</script>
+
+</body>
+</html>
