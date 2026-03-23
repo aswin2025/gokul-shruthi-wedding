@@ -6,11 +6,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Gokul & Shruthi Wedding</title>
+<title>Gokul & Sruthi Wedding</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -18,6 +20,17 @@
 </head>
 
 <body>
+
+<div id="welcome-screen">
+  <div class="welcome-box">
+    <h1>Gokul & Sruthi</h1>
+    <button id="enter-btn">Open Invitation</button>
+  </div>
+</div>
+
+<audio id="music" loop preload="auto">
+  <source src="music.mp3" type="audio/mp3">
+</audio>
 
 <div class="tabs">
 
@@ -35,7 +48,7 @@
 
 <div class="card">
 
-<div class="couple-name">Gokul & Shruthi</div>
+<div class="couple-name">Gokul & Sruthi</div>
 
 <img src="couple.jpg" class="photo">
 
@@ -49,11 +62,11 @@ As we make our vows and begin our new life together, having you with us would be
 <p class="invite-text">Bound by love and blessed by family, we</p>
 
 <div class="invite-names">Gokul</div>
-<p class="invite-text">Son of K. S. Jain & Mini. V.</p>
+<p class="invite-text">Son of K. S. Jain & Saja. S</p>
 
 <p class="invite-text">&</p>
 
-<div class="invite-names">Shruthi</div>
+<div class="invite-names">Sruthi</div>
 <p class="invite-text">Daughter of Santhosh S & Preetha Santhosh</p>
 
 <p class="invite-text">
@@ -64,9 +77,9 @@ invite you to join us in celebrating the most precious day of our lives.
 
 <div class="card">
 
-<div class="section-title">Save The Date</div>
+<div class="save-date">Save The Date</div>
 
-<p class="invite-text">May 10 • 10:30 AM</p>
+<p class="date-text"><b>May 10, 2026 • 10:30 AM</b></p>
 
 <div class="countdown">
 
@@ -88,6 +101,11 @@ invite you to join us in celebrating the most precious day of our lives.
 
 </div>
 
+<div class="swipe-next" onclick="openTab('ceremony', document.querySelectorAll('.tab')[1])">
+<span>Swipe</span>
+<i class="fa-solid fa-arrow-right"></i>
+</div>
+
 </div>
 
 </div>
@@ -106,17 +124,17 @@ invite you to join us in celebrating the most precious day of our lives.
 
 <div class="details">
 <i class="fa-solid fa-calendar"></i>
-<span class="highlight"> Date:</span> Sunday, 10th May 2026
+<span class="highlight"> Date:</span> <b>Sunday, 10th May 2026</b>
 </div>
 
 <div class="details">
 <i class="fa-solid fa-clock"></i>
-<span class="highlight"> Time:</span> 10:45 AM – 11:20 PM
+<span class="highlight"> Time:</span> <b>10:45 AM – 11:20 PM</b>
 </div>
 
 <div class="details">
 <i class="fa-solid fa-location-dot"></i>
-<span class="highlight"> Venue:</span> Lijo Auditorium, Kumbazhamuri, Pathanamthitta
+<span class="highlight"> Venue:</span> <b>Lijo Auditorium, Kumbazhamuri, Pathanamthitta</b>
 </div>
 
 <p class="invite-text">
@@ -132,6 +150,10 @@ With joyful hearts and hopeful eyes, we await your presence as we begin this new
 
 <iframe src="https://www.google.com/maps?q=Lijo%20Auditorium%20Pathanamthitta&output=embed">></iframe>
 
+</div>
+<div class="swipe-next" onclick="openTab('reception', document.querySelectorAll('.tab')[2])">
+<span>Swipe</span>
+<i class="fa-solid fa-arrow-right"></i>
 </div>
 
 </div> 
@@ -154,17 +176,17 @@ A night to celebrate love, laughter, and new beginnings with family and friends.
 
 <div class="details">
 <i class="fa-solid fa-calendar"></i>
-<span class="highlight"> Date:</span> Saturday, 16th May 2026
+<span class="highlight"> Date:</span> <b>Saturday, 16th May 2026</b>
 </div>
 
 <div class="details">
 <i class="fa-solid fa-clock"></i>
-<span class="highlight"> Time:</span> 5:00 PM – 9:00 PM
+<span class="highlight"> Time:</span> <b>5:00 PM – 9:00 PM</b>
 </div>
 
 <div class="details">
 <i class="fa-solid fa-location-dot"></i>
-<span class="highlight"> Venue:</span> AL-Saj Comet Mini Hall, Kazhakootam, Trivandrum
+<span class="highlight"> Venue:</span> <b>AL-Saj Comet Mini Hall, Kazhakootam, Trivandrum</b>
 </div>
 
 </div>
@@ -178,10 +200,6 @@ A night to celebrate love, laughter, and new beginnings with family and friends.
 </div>
 
 </div>
-
-<audio id="music" loop preload="auto">
-<source src="music.mp3" type="audio/mp3">
-</audio>
 
 <button class="music" onclick="toggleMusic()">🎵</button>
 
