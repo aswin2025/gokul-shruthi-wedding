@@ -136,22 +136,3 @@ document.body.addEventListener("click", startMusic, { once:true });
 document.body.addEventListener("touchstart", startMusic, { once:true });
 document.body.addEventListener("scroll", startMusic, { once:true });
 
-document.addEventListener("DOMContentLoaded", function () {
-
-const btn = document.getElementById("enter-btn");
-const screen = document.getElementById("welcome-screen");
-const music = document.getElementById("music");
-
-if(btn){
-
-btn.addEventListener("click", function(){
-
-music.play().catch(()=>{});
-
-screen.style.display = "none";
-
-});
-
-}
-
-});
