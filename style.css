@@ -51,6 +51,7 @@ box-shadow:0 6px 14px rgba(212,175,55,0.4);
 
 .section{
 padding:40px 15px;
+overflow:visible;
 }
 
 .show{

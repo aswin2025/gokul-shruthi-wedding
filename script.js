@@ -2,19 +2,27 @@
 
 function openTab(tab, btn){
 
-document.querySelectorAll(".section").forEach(section=>{
-section.classList.remove("show")
+document.querySelectorAll(".section").forEach(s=>{
+s.classList.remove("show")
 })
 
-document.querySelectorAll(".tab").forEach(tab=>{
-tab.classList.remove("active")
+document.querySelectorAll(".tab").forEach(t=>{
+t.classList.remove("active")
 })
 
-document.getElementById(tab).classList.add("show")
+const activeSection = document.getElementById(tab)
+activeSection.classList.add("show")
 
-if(btn){
 btn.classList.add("active")
-}
+
+// force scroll reset AFTER layout updates
+setTimeout(()=>{
+window.scrollTo({
+top:0,
+left:0,
+behavior:"instant"
+})
+},50)
 
 }
 
@@ -82,23 +90,21 @@ petalsContainer.appendChild(petal)
 
 // FLOATING LIGHTS (RECEPTION PAGE)
 
-const lightsContainer = document.querySelector(".lights")
-
-if(lightsContainer){
+document.querySelectorAll(".lights").forEach(container => {
 
 for(let i=0;i<25;i++){
 
-let light = document.createElement("span")
+let light=document.createElement("span")
 
-light.style.left = Math.random()*100+"%"
-light.style.top = Math.random()*100+"%"
-light.style.animationDelay = Math.random()*5+"s"
+light.style.left=Math.random()*100+"%"
+light.style.top=Math.random()*100+"%"
+light.style.animationDelay=Math.random()*5+"s"
 
-lightsContainer.appendChild(light)
-
-}
+container.appendChild(light)
 
 }
+
+})
 
 
 // MOBILE SWIPE NAVIGATION
@@ -135,4 +141,27 @@ music.play().catch(()=>{});
 document.body.addEventListener("click", startMusic, { once:true });
 document.body.addEventListener("touchstart", startMusic, { once:true });
 document.body.addEventListener("scroll", startMusic, { once:true });
+
+var countDownDate = new Date("May 10, 2026 10:30:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = countDownDate - now;
+
+document.getElementById("days").innerHTML =
+Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML =
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
 
